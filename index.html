@@ -26,39 +26,15 @@
 				<br>
 				<div class="TITLE"></div>
 			</a>
-			<!--<a draggable="true" class="button breeze-button" href="https://kde.org/">
-				<div class="edit-button">
-					<img class="edit-button" src="https://raw.githubusercontent.com/KDE/breeze-icons/master/icons-dark/actions/16/configure.svg">
-				</div>
-				<img class="IMG" src="https://kde.org/stuff/clipart/logo/kde-logo-white-blue-rounded-source.svg">
-				<br>
-				<div class="TITLE">KDE</div>
-			</a>
-			<a draggable="true" class="button breeze-button" href="https://linux.org/">
-				<div class="edit-button">
-					<img class="edit-button" src="img/configure.svg">
-				</div>
-				<img class="IMG" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Tux.png/220px-Tux.png">
-				<br>
-				<div class="TITLE">Linux.org</div>
-			</a>
-			<a draggable="true" class="button breeze-button" href="https://mozilla.org/">
-				<div class="edit-button">
-					<img class="edit-button" src="img/configure.svg">
-				</div>
-				<img class="IMG" src="https://www.mozilla.org/media/protocol/img/logos/mozilla/logo-word-hor.e20791bb4dd4.svg">
-				<br>
-				<div class="TITLE">Mozilla</div>
-			</a>-->
 		</div>
 
 		<div id="popup" class="modal">
 			<div class="modal-content">
 				<div id="configureTitle">Add bookmark</div>
 				<form id="newBookmark" action="#">
-					<input id="configureName" type="text" placeholder="Name..." name="name" class="text-field breeze-textbox">
-					<input id="configureImage" type="text" placeholder="Image..." name="image" class="text-field breeze-textbox">
-					<input id="configureUrl" type="text" placeholder="URL..." name="url" class="text-field breeze-textbox">
+					<input id="configureName" type="text" placeholder="Name..." name="name" class="text-field breeze-textbox" autocomplete="off">
+					<input id="configureImage" type="text" placeholder="Image..." name="image" class="text-field breeze-textbox" autocomplete="off">
+					<input id="configureUrl" type="text" placeholder="URL..." name="url" class="text-field breeze-textbox" autocomplete="off">
 					<div id="configureButtons">
 						<input type="submit" hidden>
 						<input id="configureTrash" type="image" class="breeze-button" src="img/edit-delete.svg">

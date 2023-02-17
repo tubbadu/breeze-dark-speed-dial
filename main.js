@@ -10,17 +10,17 @@ try {
 	bookmarks = [
 		{
 			title: "KDE",
-			src: "https://kde.org/",
+			url: "https://kde.org/",
 			img: "https://kde.org/stuff/clipart/logo/kde-logo-white-blue-rounded-source.svg"
 		},
 		{
 			title: "Linux.org",
-			src: "https://linux.org/",
+			url: "https://linux.org/",
 			img: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Tux.png/220px-Tux.png"
 		},
 		{
 			title: "Mozilla",
-			src: "https://mozilla.org/",
+			url: "https://mozilla.org/",
 			img: "https://www.mozilla.org/media/protocol/img/logos/mozilla/logo-word-hor.e20791bb4dd4.svg"
 		}
 	]
@@ -28,7 +28,7 @@ try {
 
 
 for (let bookmark of bookmarks) {
-	addBookmark(bookmark.title, bookmark.src, bookmark.img);
+	addBookmark(bookmark.title, bookmark.url, bookmark.img);
 }
 
 function updateBookmark(name, url, imageUrl, target){ // update an existing bookmark
@@ -77,6 +77,7 @@ function saveConfig(){
 	console.log("saving")
 	localStorage.setItem("bookmarks", document.getElementById("buttons-container").textContent)
 	let data = getButtonData();
+	console.log(data)
 	localStorage.setItem("bookmarksJSON", JSON.stringify(data))	
 }
 
@@ -100,9 +101,15 @@ function getButtonData() {
 	const buttonsContainer = document.getElementById("buttons-container");
 	const buttons = buttonsContainer.querySelectorAll("a:not(#button-template)");
 	buttons.forEach((button) => {
-		const img = button.querySelector(".IMG").getAttribute("src");
+		const img = button.querySelector(".IMG").src //getAttribute("src");
 		const title = button.querySelector(".TITLE").textContent;
-		buttonData.push({ title, img });
+		const url = button.href
+		const data = {
+			title: title,
+			url: url,
+			img: img
+		}
+		buttonData.push(data);
 	});
 
 	return buttonData;

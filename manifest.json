@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "Breeze Dark speed dial",
-	"version": "1.0",
+	"version": "1.2",
 	"description": "Replaces new tab and home tab with a Breeze Dark themed speed dial page",
 	"author": "tubbadu",
 	"permissions": [
