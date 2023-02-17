@@ -1,0 +1,23 @@
+{
+	"manifest_version": 2,
+	"name": "Breeze Dark speed dial",
+	"version": "1.0",
+	"description": "Replaces new tab and home tab with a Breeze Dark themed speed dial page",
+	"author": "tubbadu",
+	"permissions": [
+		"bookmarks",
+		"contextMenus",
+		"storage",
+		"unlimitedStorage",
+		"activeTab",
+		"tabs",
+		"search",
+		"<all_urls>"
+	],
+	"chrome_url_overrides": {
+		"newtab": "index.html"
+	},
+	"chrome_settings_overrides": {
+		"homepage": "index.html"
+	}
+}

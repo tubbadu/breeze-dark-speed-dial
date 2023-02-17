@@ -1,0 +1,228 @@
+/* Add styles for the search box and buttons */
+html {
+	height: 100%;
+	width: 100%;
+	display: table;
+	margin: auto;
+	font-family: "Noto Sans";
+}
+body {
+	background-color: #2a2e32;
+	color: #fcfcfc;
+	height: 95%;
+	width: 95%;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+.logo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 10px;
+}
+  
+.logo img {
+	height: 100px;
+	margin-right: 10px;
+}
+.breeze-button{
+	background-color: #31363b;
+	border-radius: 10px;
+	border: 1px solid #6e7175;
+	text-decoration: none;
+	color: #fcfcfc;
+}
+.breeze-textbox{
+	background-color: #1b1e20;
+	color: #fcfcfc;
+	border: 1px solid #5f6265;
+	border-radius: 5px;
+}
+.search-box {
+	width: 60%;
+	margin: auto;
+	text-align: center;
+	padding: 20px;
+	vertical-align: middle;
+}
+.text-field:focus, .text-field:hover {
+	outline: none;
+	border: 1px solid #3cace6;
+}
+.text-field {
+	width: 70%;
+	padding: 10px;
+	font-size: 16px;
+	
+}
+.search-box input[type="image"] {
+	width: 35px;
+	height: 35px;
+	background-color: #1b1e20;
+	color: white;
+	border: 0px;
+	margin-left: -45px;
+	margin-bottom: -10px
+}
+
+.buttons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 20px;
+}
+.button {
+	position: relative;
+	width: 120px;
+	height: 80px;
+	display: block;
+	margin: 20px;
+	text-align: center;
+	padding: 25px;
+	font-size: 16px;
+}
+.breeze-button:hover{
+	outline: none;
+	border: 1px solid #3cace6;
+}
+.buttons img {
+	height: 80%;
+	width: 100%;
+	object-fit: contain;
+	margin-bottom: 10px;
+}
+
+
+/* The Modal (background) */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 100px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: #1b1e20ae; /* Black w/ opacity */
+}
+
+  /* Modal Content */
+.modal-content {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 400px;
+	display: block;
+	margin: 20px;
+	text-align: center;
+	padding: 25px;
+	background-color: #2a2e32;
+	color: #fcfcfc;
+	border-radius: 10px;
+	border: 1px solid #6e7175;
+	text-decoration: none;
+	color: #fcfcfc;
+	font-size: 16px;
+}
+
+
+#newBookmark input[type="image"]{
+	display: inline-block;
+	margin: auto;
+	padding-top: 5px;
+	margin-top: 5px;
+	width: 30px;
+	height: 30px;
+}
+#newBookmark input{
+	padding: 5px;
+	margin: 5px;
+}
+
+
+
+#button-template{
+	display: none;
+}
+
+
+.options-popup {
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: white;
+	border: 1px solid gray;
+	padding: 8px;
+}
+  
+.options-button {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 20px;
+	width: 20px;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+.options-button img{
+	height: 13px;
+	width: 13px;
+	top: 50%;
+	left: 50%;
+	/*display: none;    fix!!! */ 
+	
+}
+
+.button:hover .edit-button {
+    display: inline-block;
+}
+
+.edit-button{
+	position: absolute;
+	top: 1px;
+	right: 1px;
+	display: none;
+	height: 24px;
+	width: 24px;
+}
+
+#addNew{
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	width: 40px;
+}
+
+
+
+
+/*
+
+Yes, CSS variables, also known as custom properties, can be used to assign a value to a single property or multiple properties. The value assigned to a CSS variable can be reused in the same style rule or in any other rules that inherit the variable.
+
+Here is an example of how to create a CSS variable and use it to assign values to multiple properties:
+
+css
+
+:root {
+  --primary-color: #007bff;
+}
+
+button {
+  color: var(--primary-color);
+  background-color: white;
+  border: 2px solid var(--primary-color);
+}
+
+In this example, we've created a variable called --primary-color and assigned it a value of #007bff. We then use this variable to set the color property of a button element to the primary color and also to set the border-color property.
+
+By using a variable for these values, we can easily change the primary color throughout our entire stylesheet by changing the value of the --primary-color variable.
+
+*/
