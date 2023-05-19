@@ -48,7 +48,7 @@ body {
 }
 .text-field:focus, .text-field:hover {
 	outline: none;
-	border: 1px solid #3cace6;
+	border: 1px solid #089B89;
 }
 .text-field {
 	width: 70%;
@@ -84,7 +84,10 @@ body {
 }
 .breeze-button:hover{
 	outline: none;
-	border: 1px solid #3cace6;
+	border: 1px solid #089B89;
+}
+.breeze-button:active{
+	background-color: #1b5c56;
 }
 .buttons img {
 	height: 80%;
